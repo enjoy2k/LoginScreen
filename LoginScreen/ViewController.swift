@@ -21,6 +21,12 @@ class ViewController: UIViewController {
         userNameTF.returnKeyType = .next
         passwordTF.returnKeyType = .done
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if touches.first != nil {
+            view.endEditing(true)
+            super .touchesBegan(touches, with: event)
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? GreetingsViewController else {
@@ -30,14 +36,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func logInButtonPressed() {
-        //        Здесь нужно сверить правильность полей
-        guard let inputText = userNameTF.text, inputText.isEmpty else {
-            let loginFailure = UIAlertController(title: "Invalid login or password!", message: "Please, enter correct login and password", preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "Ok", style: .default)
-            
-            loginFailure.addAction(okButton)
-            present(loginFailure, animated: true)
-        return
+        if userNameTF.text == "User" && passwordTF.text == "Password" {
+        } else {
+            guard let inputText = userNameTF.text, inputText.isEmpty else {
+                let loginFailure = UIAlertController(title: "Invalid login or password!", message: "Please, enter correct login and password", preferredStyle: .alert)
+                let okButton = UIAlertAction(title: "Ok", style: .default)
+                
+                loginFailure.addAction(okButton)
+                present(loginFailure, animated: true)
+            return
+            }
         }
     }
     
@@ -56,12 +64,14 @@ class ViewController: UIViewController {
         passwordReminder.addAction(okButton)
         present(passwordReminder, animated: true)
     }
-    
-    //    Здесь сделать @IBAction unwind() Чтобы очистить ТФы через кнопку логаут
-    //    let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-    //    self.logInTF.text = ""
-   //     self.passwordTF.text = ""
-    //}
+
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard segue.source is GreetingsViewController else {
+            return
+        }
+        self.userNameTF.text = ""
+        self.passwordTF.text = ""
+    }
 }
 
 extension ViewController: UITextFieldDelegate {
@@ -70,12 +80,11 @@ extension ViewController: UITextFieldDelegate {
         passwordTF.becomeFirstResponder()
         return true
     }
-    //    private func showAlert(with title: String, and message: String) {
-    //        guard let inputText = userNameTF.text, !userNameTF.isEmpty else {
-    //            showAlert(with: "Text field is empty", and: "Please enter your name")
-    //            return
-    //    }
-    //}
+        private func showAlert(with title: String, and message: String) {
+            guard userNameTF.text != nil else {
+                return
+        }
+    }
     
     // Сделать функцию для выведения алертов
 }
