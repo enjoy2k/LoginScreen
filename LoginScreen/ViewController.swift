@@ -38,31 +38,17 @@ class ViewController: UIViewController {
     @IBAction func logInButtonPressed() {
         if userNameTF.text == "User" && passwordTF.text == "Password" {
         } else {
-            guard let inputText = userNameTF.text, inputText.isEmpty else {
-                let loginFailure = UIAlertController(title: "Invalid login or password!", message: "Please, enter correct login and password", preferredStyle: .alert)
-                let okButton = UIAlertAction(title: "Ok", style: .default)
-                
-                loginFailure.addAction(okButton)
-                present(loginFailure, animated: true)
+                showAlert(with: "Invalid login or password!", and: "Please, enter correct login and password")
             return
-            }
         }
     }
     
     @IBAction func forgotUserNameButton() {
-        let userNameReminder = UIAlertController(title: "Oops!", message: "Your name is User 🥴", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "Ok", style: .default)
-        
-        userNameReminder.addAction(okButton)
-        present(userNameReminder, animated: true)
+        showAlert(with: "Oops!", and: "Your name is User 🥴")
     }
     
     @IBAction func forgotPasswordButton() {
-        let passwordReminder = UIAlertController(title: "Oops!", message: "Your password is Password 😽", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "Ok", style: .default)
-        
-        passwordReminder.addAction(okButton)
-        present(passwordReminder, animated: true)
+        showAlert(with: "Oops!", and: "Your password is Password 😽")
     }
 
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -76,15 +62,20 @@ class ViewController: UIViewController {
 
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         passwordTF.becomeFirstResponder()
         return true
     }
-        private func showAlert(with title: String, and message: String) {
-            guard userNameTF.text != nil else {
-                return
-        }
-    }
-    
-    // Сделать функцию для выведения алертов
 }
+
+extension ViewController {
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
+
+
+
+// Реализовать дублирование кнопкой Done, функции кнопки LogIn
