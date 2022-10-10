@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LogInScreenVC: UIViewController {
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? GreetingsViewController else {
+        guard let welcomeVC = segue.destination as? WelcomeVC else {
             return
         }
         welcomeVC.welcomeLabelVar = String("Welcome, \(userNameTF.text ?? "")!")
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard segue.source is GreetingsViewController else {
+        guard segue.source is WelcomeVC else {
             return
         }
         self.userNameTF.text = ""
@@ -60,14 +60,17 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension LogInScreenVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        passwordTF.becomeFirstResponder()
+        if textField == userNameTF {
+            passwordTF.becomeFirstResponder() // Что делает эта функция тоже не понял
+        } else {
+            logInButtonPressed() // Не работает. В интернете не нашёл, в чате не помогли. Перехожу к следующему уроку, буду смотреть ответ, разбираться. 3й день не могу разобраться с реализацией этой логики. Не хочу больше терять время на этом.
+        }
         return true
     }
 }
-
-extension ViewController {
+extension LogInScreenVC {
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default)
@@ -75,7 +78,3 @@ extension ViewController {
         present(alert, animated: true)
     }
 }
-
-
-
-// Реализовать дублирование кнопкой Done, функции кнопки LogIn

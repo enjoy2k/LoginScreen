@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GreetingsViewController: UIViewController {
+class WelcomeVC: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
 //    Делаю свойство отвечающее за название лэйбла
