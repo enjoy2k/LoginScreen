@@ -50,7 +50,19 @@ class LogInScreenVC: UIViewController {
     }
 }
 
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+
 extension LogInScreenVC: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameTF {
             passwordTF.becomeFirstResponder()
@@ -59,20 +71,5 @@ extension LogInScreenVC: UITextFieldDelegate {
             performSegue(withIdentifier: "showWelcomeVC", sender: nil)
         }
         return true
-    }
-}
-extension LogInScreenVC {
-    private func showAlert(with title: String, and message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-}
-
-func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    if touches.first != nil {
-        view.endEditing(true)
-        super .touchesBegan(touches, with: event)
     }
 }
