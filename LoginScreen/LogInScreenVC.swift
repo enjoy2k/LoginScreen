@@ -30,16 +30,16 @@ class LogInScreenVC: UIViewController {
     @IBAction func logInButtonPressed() {
         if userNameTF.text != user || passwordTF.text != password {
         } else {
-                showAlert(with: "Invalid login or password!",
-                          and: "Please, enter correct login and password")
+            showAlert(with: "Invalid login or password!",
+                      and: "Please, enter correct login and password")
             return
         }
     }
     
-    @IBAction func forgotUserData(sender: UIButton) {
-        sender.tag = 0
-        : showAlert(with: "Oops!", and: "Your name is User 🥴")
-        ?? showAlert(with: "Oops!", and: "Your password is Password 😽")
+    @IBAction func forgotUserData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(with: "Oops!", and: "Your name is \(user) 🥴")
+        : showAlert(with: "Oops!", and: "Your password is \(password) 😽")
     }
 
     @IBAction func unwind(with segue: UIStoryboardSegue) {
