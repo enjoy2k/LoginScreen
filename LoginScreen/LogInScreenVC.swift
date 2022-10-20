@@ -51,7 +51,7 @@ class LogInScreenVC: UIViewController {
         showAlert(with: "Oops!", and: "Your password is Password 😽")
     }
 
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
+    @IBAction func unwind(with segue: UIStoryboardSegue) {
         self.userNameTF.text = ""
         self.passwordTF.text = ""
     }
