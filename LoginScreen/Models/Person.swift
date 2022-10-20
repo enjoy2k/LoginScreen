@@ -10,9 +10,9 @@ struct User {
     let password: String
     let danya: Person
 //    Создать метод который возвращает Экземпляр модели Person
-    static func getUserInfo() -> Person {
-        
-    }
+//    static func getUserInfo() -> Person {
+//        
+//    }
 }
 
 struct Person {

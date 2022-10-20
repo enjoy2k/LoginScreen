@@ -161,13 +161,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="HFh-Ko-qrb"/>
-                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <color key="backgroundColor" red="0.71940535746934442" green="0.89352073451383496" blue="0.98975961994572326" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="\(user)" id="gSH-4S-z8r"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxM-EM-6g2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2848" y="-2"/>
+        </scene>
+        <!--Postcards-->
+        <scene sceneID="in8-JQ-XZZ">
+            <objects>
+                <viewController id="rlP-XO-zlQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bMj-SF-PwA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kp2-Y9-poR"/>
+                        <color key="backgroundColor" red="0.80309177320297764" green="1" blue="0.70952156740287375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Postcards" image="person.crop.rectangle.stack" catalog="system" id="qIZ-BD-dzn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUO-ab-fSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3504" y="-3"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pBi-Rh-Tdk">
@@ -182,6 +198,7 @@
                     <connections>
                         <segue destination="Dht-Z9-QfI" kind="relationship" relationship="viewControllers" id="7KO-3I-zjF"/>
                         <segue destination="6jm-rp-949" kind="relationship" relationship="viewControllers" id="mMq-9M-3Je"/>
+                        <segue destination="rlP-XO-zlQ" kind="relationship" relationship="viewControllers" id="Hs9-HF-Vfi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcV-M1-J67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -210,15 +227,13 @@
     </scenes>
     <resources>
         <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="person.crop.rectangle.stack" catalog="system" width="128" height="122"/>
         <image name="person.text.rectangle" catalog="system" width="128" height="93"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
