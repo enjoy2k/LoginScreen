@@ -36,12 +36,9 @@ class LogInScreenVC: UIViewController {
         }
     }
     
-    @IBAction func forgotUserNameButton() {
-        showAlert(with: "Oops!", and: "Your name is User 🥴")
-    }
-    
-    @IBAction func forgotPasswordButton() {
-        showAlert(with: "Oops!", and: "Your password is Password 😽")
+    @IBAction func forgotUserData() {
+        : showAlert(with: "Oops!", and: "Your name is User 🥴")
+        ?? showAlert(with: "Oops!", and: "Your password is Password 😽")
     }
 
     @IBAction func unwind(with segue: UIStoryboardSegue) {
@@ -50,12 +47,14 @@ class LogInScreenVC: UIViewController {
     }
 }
 
+extension LogInScreenVC {
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+}
 
 extension LogInScreenVC: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
