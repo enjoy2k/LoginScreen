@@ -36,7 +36,8 @@ class LogInScreenVC: UIViewController {
         }
     }
     
-    @IBAction func forgotUserData() {
+    @IBAction func forgotUserData(sender: UIButton) {
+        sender.tag = 0
         : showAlert(with: "Oops!", and: "Your name is User 🥴")
         ?? showAlert(with: "Oops!", and: "Your password is Password 😽")
     }
