@@ -23,16 +23,15 @@ class LogInScreenVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeVC else {
-            return
-        }
-        welcomeVC.user = String("Welcome, \(userNameTF.text ?? "")!")
+        guard let welcomeVC = segue.destination as? WelcomeVC else { return }
+        welcomeVC.user = user
     }
     
     @IBAction func logInButtonPressed() {
-        if userNameTF.text == "User" && passwordTF.text == "Password" {
+        if userNameTF.text != user || passwordTF.text != password {
         } else {
-                showAlert(with: "Invalid login or password!", and: "Please, enter correct login and password")
+                showAlert(with: "Invalid login or password!",
+                          and: "Please, enter correct login and password")
             return
         }
     }
