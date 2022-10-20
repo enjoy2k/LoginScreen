@@ -53,8 +53,8 @@
 		A78FBD2829018D36005123CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A798C95128EC14A9007FE413 /* AppDelegate.swift */,
-				A798C95328EC14A9007FE413 /* SceneDelegate.swift */,
+				A798C95528EC14A9007FE413 /* LogInScreenVC.swift */,
+				A798C96728EC189E007FE413 /* WelcomeVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -62,8 +62,8 @@
 		A78FBD2929018D49005123CC /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A798C95528EC14A9007FE413 /* LogInScreenVC.swift */,
-				A798C96728EC189E007FE413 /* WelcomeVC.swift */,
+				A798C95128EC14A9007FE413 /* AppDelegate.swift */,
+				A798C95328EC14A9007FE413 /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
