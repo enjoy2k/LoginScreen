@@ -32,7 +32,7 @@ class LogInScreenVC: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeVC else {
             return
         }
-        welcomeVC.welcomeLabelVar = String("Welcome, \(userNameTF.text ?? "")!")
+        welcomeVC.user = String("Welcome, \(userNameTF.text ?? "")!")
     }
     
     @IBAction func logInButtonPressed() {
