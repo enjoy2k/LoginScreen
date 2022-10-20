@@ -65,7 +65,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="UD4-PD-HyI"/>
-                                    <segue destination="Dht-Z9-QfI" kind="presentation" id="VK7-dA-Q4m"/>
+                                    <segue destination="Dht-Z9-QfI" kind="presentation" modalPresentationStyle="fullScreen" id="VK7-dA-Q4m"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,7 +98,7 @@
             <objects>
                 <viewController id="Dht-Z9-QfI" customClass="WelcomeVC" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mih-5P-DNP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cba-L1-wGQ">
@@ -127,6 +127,7 @@
                         <viewLayoutGuide key="safeArea" id="qdH-Ip-2xI"/>
                         <color key="backgroundColor" red="0.97058786727518254" green="1" blue="0.51389388893720267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" systemColor="linkColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="showWelcomeVC"/>
                         <constraints>
                             <constraint firstItem="2Vf-Wl-ZaF" firstAttribute="centerX" secondItem="mih-5P-DNP" secondAttribute="centerX" id="6v6-Pa-ntD"/>
                             <constraint firstItem="bcT-XJ-KWw" firstAttribute="leading" secondItem="qdH-Ip-2xI" secondAttribute="leading" constant="20" id="9Bx-la-Wza"/>

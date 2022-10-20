@@ -13,7 +13,6 @@ class WelcomeVC: UIViewController {
     
     var user = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

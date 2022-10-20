@@ -63,9 +63,10 @@ class LogInScreenVC: UIViewController {
 extension LogInScreenVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameTF {
-            passwordTF.becomeFirstResponder() // Что делает эта функция тоже не понял
+            passwordTF.becomeFirstResponder()
         } else {
-            logInButtonPressed() // Не работает. В интернете не нашёл, в чате не помогли. Перехожу к следующему уроку, буду смотреть ответ, разбираться. 3й день не могу разобраться с реализацией этой логики. Не хочу больше терять время на этом.
+            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+            logInButtonPressed()
         }
         return true
     }
