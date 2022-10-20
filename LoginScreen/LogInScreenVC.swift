@@ -29,7 +29,6 @@ class LogInScreenVC: UIViewController {
     
     @IBAction func logInButtonPressed() {
         if userNameTF.text != user || passwordTF.text != password {
-        } else {
             showAlert(title: "Invalid login or password!",
                       message: "Please, enter correct login and password")
             return
