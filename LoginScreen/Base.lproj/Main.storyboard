@@ -65,7 +65,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="UD4-PD-HyI"/>
-                                    <segue destination="Dht-Z9-QfI" kind="presentation" modalPresentationStyle="fullScreen" id="VK7-dA-Q4m"/>
+                                    <segue destination="HXA-6V-6RJ" kind="presentation" modalPresentationStyle="fullScreen" id="VK7-dA-Q4m"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -93,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="55.725190839694655" y="-2.8169014084507045"/>
         </scene>
-        <!--WelcomeVC-->
+        <!--Person data-->
         <scene sceneID="Sqh-lL-1T9">
             <objects>
                 <viewController id="Dht-Z9-QfI" customClass="WelcomeVC" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +113,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-Wl-ZaF">
-                                <rect key="frame" x="107" y="484" width="106" height="44"/>
+                                <rect key="frame" x="107" y="427" width="106" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
@@ -135,10 +135,11 @@
                             <constraint firstItem="bcT-XJ-KWw" firstAttribute="top" secondItem="cba-L1-wGQ" secondAttribute="bottom" constant="61" id="Fa6-Xl-88R"/>
                             <constraint firstItem="cba-L1-wGQ" firstAttribute="top" secondItem="qdH-Ip-2xI" secondAttribute="top" constant="111" id="LCc-vH-Vgb"/>
                             <constraint firstItem="cba-L1-wGQ" firstAttribute="leading" secondItem="qdH-Ip-2xI" secondAttribute="leading" constant="20" id="RFg-5L-WIR"/>
-                            <constraint firstItem="2Vf-Wl-ZaF" firstAttribute="top" secondItem="cba-L1-wGQ" secondAttribute="bottom" constant="337" id="qEv-IF-pro"/>
+                            <constraint firstItem="2Vf-Wl-ZaF" firstAttribute="top" secondItem="cba-L1-wGQ" secondAttribute="bottom" constant="280" id="qEv-IF-pro"/>
                             <constraint firstItem="bcT-XJ-KWw" firstAttribute="centerX" secondItem="mih-5P-DNP" secondAttribute="centerX" id="rwn-Uo-kb2"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Person data" image="person.text.rectangle" catalog="system" id="wJ0-TR-9HK"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="cba-L1-wGQ" id="sVP-zW-pMj"/>
                     </connections>
@@ -146,15 +147,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BG1-2T-mq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wqb-mB-Ic0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="779.38931297709917" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1472" y="-2"/>
+        </scene>
+        <!--\(user)-->
+        <scene sceneID="Gl6-wB-U8f">
+            <objects>
+                <viewController id="9JW-CZ-eUj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ibU-zD-eth">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HFh-Ko-qrb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="\(user)" id="gSH-4S-z8r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FxM-EM-6g2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2848" y="-2"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pBi-Rh-Tdk">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HXA-6V-6RJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hiw-fW-OW9">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Dht-Z9-QfI" kind="relationship" relationship="viewControllers" id="7KO-3I-zjF"/>
+                        <segue destination="6jm-rp-949" kind="relationship" relationship="viewControllers" id="mMq-9M-3Je"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcV-M1-J67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778.125" y="-2.112676056338028"/>
+        </scene>
+        <!--About \(user)-->
+        <scene sceneID="0iv-wV-xeZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6jm-rp-949" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About \(user)" image="person.circle" catalog="system" id="fJP-lX-K31"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="neU-hH-0Zo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9JW-CZ-eUj" kind="relationship" relationship="rootViewController" id="GiO-Pd-05n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nQ9-Qh-wc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2145" y="-3.1690140845070425"/>
         </scene>
     </scenes>
     <resources>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="person.text.rectangle" catalog="system" width="128" height="93"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
