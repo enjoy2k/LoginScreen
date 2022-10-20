@@ -12,20 +12,14 @@ class LogInScreenVC: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    private let user = "User"
+    private let password = "Password"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userNameTF.delegate = self
-        passwordTF.delegate = self
-        
         userNameTF.returnKeyType = .next
         passwordTF.returnKeyType = .done
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if touches.first != nil {
-            view.endEditing(true)
-            super .touchesBegan(touches, with: event)
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -74,5 +68,12 @@ extension LogInScreenVC {
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    if touches.first != nil {
+        view.endEditing(true)
+        super .touchesBegan(touches, with: event)
     }
 }
