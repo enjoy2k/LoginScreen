@@ -30,26 +30,26 @@ class LogInScreenVC: UIViewController {
     @IBAction func logInButtonPressed() {
         if userNameTF.text != user || passwordTF.text != password {
         } else {
-            showAlert(with: "Invalid login or password!",
-                      and: "Please, enter correct login and password")
+            showAlert(title: "Invalid login or password!",
+                      message: "Please, enter correct login and password")
             return
         }
     }
     
     @IBAction func forgotUserData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(with: "Oops!", and: "Your name is \(user) 🥴")
-        : showAlert(with: "Oops!", and: "Your password is \(password) 😽")
+        ? showAlert(title: "Oops!", message: "Your name is \(user) 🥴")
+        : showAlert(title: "Oops!", message: "Your password is \(password) 😽")
     }
 
-    @IBAction func unwind(with segue: UIStoryboardSegue) {
-        self.userNameTF.text = ""
-        self.passwordTF.text = ""
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
 }
 
 extension LogInScreenVC {
-    private func showAlert(with title: String, and message: String) {
+    private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(okAction)
