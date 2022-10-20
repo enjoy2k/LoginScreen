@@ -125,8 +125,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logOutButton" destination="Dht-Z9-QfI" eventType="touchUpInside" id="HGE-Le-p74"/>
-                                    <segue destination="wqb-mB-Ic0" kind="unwind" unwindAction="unwindFor:" id="UPj-X0-12G"/>
+                                    <segue destination="wqb-mB-Ic0" kind="unwind" unwindAction="unwindWithSegue:" id="fdD-nk-ojq"/>
                                 </connections>
                             </button>
                         </subviews>
