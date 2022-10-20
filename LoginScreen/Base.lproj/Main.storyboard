@@ -65,7 +65,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="UD4-PD-HyI"/>
-                                    <segue destination="HXA-6V-6RJ" kind="presentation" modalPresentationStyle="fullScreen" id="VK7-dA-Q4m"/>
+                                    <segue destination="HXA-6V-6RJ" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="VK7-dA-Q4m"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,14 +120,13 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logOutButton" destination="Dht-Z9-QfI" eventType="touchUpInside" id="HGE-Le-p74"/>
-                                    <segue destination="wqb-mB-Ic0" kind="unwind" unwindAction="unwindFor:" id="mtn-ei-3MZ"/>
+                                    <segue destination="wqb-mB-Ic0" kind="unwind" unwindAction="unwindFor:" id="UPj-X0-12G"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qdH-Ip-2xI"/>
                         <color key="backgroundColor" red="0.97058786727518254" green="1" blue="0.51389388893720267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" systemColor="linkColor"/>
-                        <accessibility key="accessibilityConfiguration" identifier="showWelcomeVC"/>
                         <constraints>
                             <constraint firstItem="2Vf-Wl-ZaF" firstAttribute="centerX" secondItem="mih-5P-DNP" secondAttribute="centerX" id="6v6-Pa-ntD"/>
                             <constraint firstItem="bcT-XJ-KWw" firstAttribute="leading" secondItem="qdH-Ip-2xI" secondAttribute="leading" constant="20" id="9Bx-la-Wza"/>
@@ -171,6 +170,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HXA-6V-6RJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hiw-fW-OW9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

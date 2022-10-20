@@ -52,9 +52,6 @@ class LogInScreenVC: UIViewController {
     }
 
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard segue.source is WelcomeVC else {
-            return
-        }
         self.userNameTF.text = ""
         self.passwordTF.text = ""
     }
