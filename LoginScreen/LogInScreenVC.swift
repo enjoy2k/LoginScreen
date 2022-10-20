@@ -65,8 +65,8 @@ extension LogInScreenVC: UITextFieldDelegate {
         if textField == userNameTF {
             passwordTF.becomeFirstResponder()
         } else {
-            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
             logInButtonPressed()
+            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
         }
         return true
     }
