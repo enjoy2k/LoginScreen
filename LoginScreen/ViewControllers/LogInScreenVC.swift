@@ -17,7 +17,6 @@ class LogInScreenVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         userNameTF.returnKeyType = .next
         passwordTF.returnKeyType = .done
     }
@@ -25,6 +24,8 @@ class LogInScreenVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeVC else { return }
         welcomeVC.user = user
+        
+//        let tabBarController = segue.destination as! UITabBarController else { return }
     }
     
     @IBAction func logInButtonPressed() {
@@ -72,3 +73,13 @@ extension LogInScreenVC: UITextFieldDelegate {
         return true
     }
 }
+//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//       let tabBarController = segue.destination as! UITabBarController
+//       ...
+//        for viewController in viewControllers {
+//           if let welcomeVC = viewController as? WelcomeViewController {
+//
+//           }
+//       }
+//       ...
+//   }

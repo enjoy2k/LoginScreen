@@ -145,7 +145,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Person data" image="person.text.rectangle" catalog="system" id="wJ0-TR-9HK"/>
                     <connections>
-                        <outlet property="welcomeLabel" destination="cba-L1-wGQ" id="sVP-zW-pMj"/>
+                        <outlet property="welcomeLabel" destination="cba-L1-wGQ" id="ikB-YZ-bXM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BG1-2T-mq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -212,7 +212,7 @@
                     <tabBarItem key="tabBarItem" title="About \(user)" image="person.circle" catalog="system" id="fJP-lX-K31"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="neU-hH-0Zo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
