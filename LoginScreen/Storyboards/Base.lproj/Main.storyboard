@@ -156,30 +156,60 @@
         <!--\(user)-->
         <scene sceneID="Gl6-wB-U8f">
             <objects>
-                <viewController id="9JW-CZ-eUj" sceneMemberID="viewController">
+                <viewController id="9JW-CZ-eUj" customClass="AboutUserVC" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ibU-zD-eth">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет!!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxt-Y8-vb4">
+                                <rect key="frame" x="20" y="64" width="280" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HFh-Ko-qrb"/>
                         <color key="backgroundColor" red="0.71940535746934442" green="0.89352073451383496" blue="0.98975961994572326" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jxt-Y8-vb4" firstAttribute="leading" secondItem="HFh-Ko-qrb" secondAttribute="leading" constant="20" id="0K9-SL-lfr"/>
+                            <constraint firstItem="HFh-Ko-qrb" firstAttribute="trailing" secondItem="Jxt-Y8-vb4" secondAttribute="trailing" constant="20" id="i8B-gY-moT"/>
+                            <constraint firstItem="Jxt-Y8-vb4" firstAttribute="top" secondItem="HFh-Ko-qrb" secondAttribute="top" constant="20" id="yjF-rT-eik"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="\(user)" id="gSH-4S-z8r"/>
+                    <connections>
+                        <outlet property="aboutUserLabel" destination="Jxt-Y8-vb4" id="jRc-ew-j48"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxM-EM-6g2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2848" y="-2"/>
+            <point key="canvasLocation" x="2846.25" y="-2.112676056338028"/>
         </scene>
         <!--Postcards-->
         <scene sceneID="in8-JQ-XZZ">
             <objects>
-                <viewController id="rlP-XO-zlQ" sceneMemberID="viewController">
+                <viewController id="rlP-XO-zlQ" customClass="PhotosPageVC" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bMj-SF-PwA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVh-tl-58l">
+                                <rect key="frame" x="40" y="72.5" width="240" height="183"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kp2-Y9-poR"/>
                         <color key="backgroundColor" red="0.80309177320297764" green="1" blue="0.70952156740287375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LVh-tl-58l" firstAttribute="leading" secondItem="kp2-Y9-poR" secondAttribute="leading" constant="40" id="Cpf-Xo-TwV"/>
+                            <constraint firstItem="LVh-tl-58l" firstAttribute="centerY" secondItem="bMj-SF-PwA" secondAttribute="centerY" constant="-120" id="TzS-zo-XbE"/>
+                            <constraint firstItem="LVh-tl-58l" firstAttribute="top" secondItem="kp2-Y9-poR" secondAttribute="top" constant="72" id="WkH-xQ-Vn6"/>
+                            <constraint firstItem="kp2-Y9-poR" firstAttribute="trailing" secondItem="LVh-tl-58l" secondAttribute="trailing" constant="40" id="iaQ-pJ-H7T"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Postcards" image="person.crop.rectangle.stack" catalog="system" id="qIZ-BD-dzn"/>
+                    <connections>
+                        <outlet property="imagePhotoView" destination="LVh-tl-58l" id="6Kk-nx-AY9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUO-ab-fSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,7 +242,7 @@
                     <tabBarItem key="tabBarItem" title="About \(user)" image="person.circle" catalog="system" id="fJP-lX-K31"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="neU-hH-0Zo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -229,6 +259,7 @@
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.rectangle.stack" catalog="system" width="128" height="122"/>
         <image name="person.text.rectangle" catalog="system" width="128" height="93"/>
+        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
