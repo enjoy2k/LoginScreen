@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -161,9 +162,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет!!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxt-Y8-vb4">
-                                <rect key="frame" x="20" y="64" width="280" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxt-Y8-vb4">
+                                <rect key="frame" x="20" y="64" width="280" height="483.5"/>
+                                <mutableString key="text">Привет! Меня зовут Даниил, и мне 32 года!)
+С 2014 года я работаю фитнес -тренером. А в 2021, когда ко мне на тренировку пришёл парень занимающийся программированием, я задумался: "А почему я не могу стать программистом?" Я приобрёл себе ноутбук, и нашёл курс по Swift, потому что люблю пользоваться яблоками) Учиться программированию мне очень нравится!) Ещё больше нравится, когда то что я сделал, работает! Это очень приятное чувство) В связи с тем что я работаю, и тем что в семье появился ребёнок, а так же 2 собаки) , уделять много времени на учёбу не выходит. Я переживаю за то что не успею окончить курс вместе со своим потоком! Но даже если так, я всё равно закончу его изучение уже в одиночку. Я хочу сменить профессию, и рано- поздно я к этому приду!)</mutableString>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -193,8 +196,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVh-tl-58l">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVh-tl-58l">
                                 <rect key="frame" x="40" y="72.5" width="240" height="183"/>
+                                <imageReference key="image" image="square.and.arrow.up.circle.fill" catalog="system" variableValue="1"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kp2-Y9-poR"/>

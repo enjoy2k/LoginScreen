@@ -13,6 +13,6 @@ class PhotosPageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        imagePhotoView.image
     }
-
 }
