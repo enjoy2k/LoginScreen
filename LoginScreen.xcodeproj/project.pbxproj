@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A78FBD2D29018DBB005123CC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78FBD2C29018DBB005123CC /* Person.swift */; };
+		A77D8EA7290C058D000180A1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D8EA6290C058C000180A1 /* Person.swift */; };
+		A77D8EA9290C05E1000180A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D8EA8290C05E1000180A1 /* User.swift */; };
 		A798C95228EC14A9007FE413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A798C95128EC14A9007FE413 /* AppDelegate.swift */; };
 		A798C95428EC14A9007FE413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A798C95328EC14A9007FE413 /* SceneDelegate.swift */; };
 		A798C95628EC14A9007FE413 /* LogInScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A798C95528EC14A9007FE413 /* LogInScreenVC.swift */; };
@@ -20,7 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A78FBD2C29018DBB005123CC /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A77D8EA6290C058C000180A1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Person.swift; path = ../../../../../../Documents/Person.swift; sourceTree = "<group>"; };
+		A77D8EA8290C05E1000180A1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A798C94E28EC14A9007FE413 /* LoginScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A798C95128EC14A9007FE413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A798C95328EC14A9007FE413 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +87,8 @@
 		A78FBD2B29018D93005123CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A78FBD2C29018DBB005123CC /* Person.swift */,
+				A77D8EA6290C058C000180A1 /* Person.swift */,
+				A77D8EA8290C05E1000180A1 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,11 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A79A90E429081DBA00EA1293 /* PhotosPageVC.swift in Sources */,
-				A78FBD2D29018DBB005123CC /* Person.swift in Sources */,
 				A79A90E22908114100EA1293 /* AboutUserVC.swift in Sources */,
 				A798C95628EC14A9007FE413 /* LogInScreenVC.swift in Sources */,
 				A798C95228EC14A9007FE413 /* AppDelegate.swift in Sources */,
+				A77D8EA9290C05E1000180A1 /* User.swift in Sources */,
 				A798C95428EC14A9007FE413 /* SceneDelegate.swift in Sources */,
+				A77D8EA7290C058D000180A1 /* Person.swift in Sources */,
 				A798C96828EC189E007FE413 /* WelcomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
